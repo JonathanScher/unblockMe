@@ -6,18 +6,18 @@ Examples:
 
 On that grid, the piece is free to go on the right, one move is enough.
 
-000000
-000000
-110000
-000000
-000000
+000000  
+000000  
+110000  
+000000  
+000000  
 000000
 
 On that grid, you need to move the piece number 2 out of the way.
 
-000000
-000002
-110002
-000000
-000000
+000000  
+000002  
+110002  
+000000  
+000000  
 000000
