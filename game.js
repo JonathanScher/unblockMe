@@ -1,6 +1,10 @@
 "use strict";
 var Piece = require('./piece.js');
 
+let thereIsAPieceHere = function(pieceNumber) {
+	return pieceNumber > 0;
+}
+
 class Game {
 	constructor(position) {
 		this.position = position;
@@ -12,9 +16,10 @@ class Game {
 		for (var i = 0; i < position.length; i++) {
 			for (var j = 0; j < position[i].length; j++) {
 				let pieceNumber = position[i][j];
-				if(pieceNumber > 0) {
-					pieces[pieces.length] = new Piece(pieceNumber, i, j);
-					j++;
+				if(thereIsAPieceHere(pieceNumber)) {
+					let piece = new Piece(position, i, j);
+					pieces[pieces.length] = piece;
+					j += piece.size - 1;
 				}
 			}
 		}
